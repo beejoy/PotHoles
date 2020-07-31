@@ -1,9 +1,4 @@
-const pet = {
-    name: 'Mikki',
-    color: 'Brown',
-    age: 4
-};
+import * as myMathLib  from './math_lib.js';
 
-const { name: petName, color: petColro, age: petAge } = pet;
-
-console.log(`My ${petAge} yo pet's name is ${petName} and she's ${petColor}.`);
+const result = myMathLib.add(2, 3);
+document.querySelector('.result').innerHTML = `The sum is ${result}.`;
