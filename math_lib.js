@@ -10,4 +10,8 @@ const multiply = (a, b) => {
     return a * b;
 }
 
-export { add, subtract, multiply };
+const divide = (a, b) => {
+    return a / b;
+}
+
+export { add, subtract, multiply, divide };
