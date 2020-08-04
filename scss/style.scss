@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@600;700&display=swap');
+
+html {
+    font-size: 100%;
+}
+* {
+    box-sizing: border-box;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;  
+    font-size: 0.875rem; // 14px
+    margin: 0;
+
+    min-width: 375px;
+    max-width: 768px;
+   
+    // Desktop layout
+    @media (min-width: 768px) {
+        font-size: 1rem; // 16px
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// Common padding styles
+.pad {
+    &_all {
+        padding: 10px;
+    }
+
+    &_horizontal {
+        padding: 0 10px;
+    }
+
+    &_vertical {
+        padding: 10px 0;
+    }
+}
+
+// Header
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    // make header fixed on top
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 2px 4px 4px hsla(0, 0%, 50%, 0.2);
+    
+    z-index: 100;
+}
+
+.overlay {
+    position: fixed;
+    top: 3.75rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 1.0);
+    opacity: 0.85;
+    z-index: 100;
+}
+.hamburger_menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    top: 12rem;
+    
+    z-index: 101;
+
+    a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        display: block;
+        padding: 0.625rem;
+
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 2.15rem;
+            font-weight: 600;
+        }
+    }
+}
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+
+#header_brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: -0.025rem;
+        padding-left: 10px;
+    }
+}
+
+.hamburger {
+    cursor: pointer;
+
+    span {
+        background-color: black;
+        display: block;
+        height: 2px;
+        width: 25px;
+    
+        transition: 200ms ease-in-out;
+        transform-origin: 3px 1px;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &.open {
+        > span:first-child {
+            transform: rotate(45deg);
+        }
+
+        > span:nth-child(2) {
+            opacity: 0;
+        }
+
+        > span:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+main {
+    margin-top: 3.75rem; //60px
+    width: 100%;
+}
+
+// Hero
+.hero {
+    padding-bottom: 2.5rem; // 40px
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1.25rem; //20px
+    }
+
+    p {
+        text-align: justify;        
+    }    
+
+    // Desktop layout
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 10px; // Fixed padding
+        padding-right: 10px; // Fixex padding
+        padding-top: 1.875rem; // 30px
+        
+        div {
+            flex: 1;
+        }
+
+        p {
+            font-size: 1.5rem;
+            padding-left: 0;
+        }
+    }
+}
+
+.potholes {
+    display: flex;
+    flex-direction: column;
+    
+    section {
+        padding: 0.625rem; // 10px
+        box-shadow: 0 3px 6px hsla(0, 0%, 50%, 0.19), 0 2px 4px hsla(0, 0%, 50%, 0.23);
+
+        margin-bottom: 1.875rem; // 30px
+    }
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        section {
+            width: 49%;
+        }
+    }
+}
+
+// Pothole Card
+.pothole_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+
+        box-shadow: 0 3px 6px hsla(0, 0%, 50%, 0.19), 0 2px 4px hsla(0, 0%, 50%, 0.23);
+    }
+
+    .pothole_description {
+        padding-top: 0.875rem;
+    }
+}
+
+.shaded {
+    background-color: hsla(0, 0%, 50%, 0.15);
+}
+
+.shoutout {
+    text-align: center;
+    margin: 1.875rem 10px; // 30px
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Footer
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 80px;
+}
+#footer_contact {
+    a:not(:last-child) {
+        padding-right: 10px;
+    }
+}
+#footer_copyright {
+    font-size: 0.75rem; // 12px
+
+    @media (min-width: 768px) {
+        font-size: 0.875rem; // 14px
+    }
+}

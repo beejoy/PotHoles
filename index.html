@@ -3,25 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Code Workflow</title>
-    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <title>Pothole</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/style.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <h1>VS Code Workflow</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis debitis architecto ducimus rerum perferendis deleniti voluptates nemo! Cupiditate delectus, accusantium eligendi porro vitae fugiat dolores placeat ad neque omnis.</p>
-    <p>Dolorum possimus amet dignissimos quaerat voluptate esse quibusdam sunt adipisci dolore alias ad ab ut eos totam neque atque eveniet, porro cum! Sunt dignissimos ducimus modi porro doloremque exercitationem harum.</p>
-    <p>Sit nihil ipsum corporis et porro cum accusamus recusandae explicabo tenetur, neque aliquid, ipsa assumenda. Doloribus dolore labore veritatis esse. Voluptatibus praesentium unde aliquid asperiores eum cum dicta necessitatibus maiores.</p>
+    <header class="pad_all">
+        <div class="overlay hidden"></div>
 
-    <ul>
-        <li class="list-item">List item</li>
-        <li class="list-item">List item</li>
-        <li class="list-item">List item</li>
-        <li class="list-item">List item</li>
-        <li class="list-item">List item</li>
-    </ul>
-    
-    <p class="result"></p>
+        <div id="header_brand">
+            <img src="images/pothole-icon.png" alt="Pothole logo" class="logo" />
+            <h1>Pothole</h1>
+        </div>
 
-    <script type="module" src="app.js"></script>
+        <a id="btnHamburger" class="hamburger hide-for-deskto">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        <div class="hamburger_menu hidden">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <main class="hide-for-desktop">
+        <section class="hero">
+            <div><img src="images/pothole-06.jpg" /></div>
+            <div>
+                <p class="pad_horizontal">According to <a href="">Wikipedia</a>, a pothole is a depression in a road surface, usually asphalt pavement, where traffic has removed broken pieces of the pavement. It is usually the result of water in the underlying soil structure and traffic passing over the affected area. Water first weakens the underlying soil; traffic then fatigues and breaks the poorly supported asphalt surface in the affected area. Continued traffic action ejects both asphalt and the underlying soil material to create a hole in the pavement.</p>
+            </div>
+        </section>
+
+        <div class="potholes pad_horizontal">
+            <section class="pothole_card">
+                <h2>Pothole #1</h2>
+                <img src="images/pothole-01.jpg" class="pothole_image" />
+                <div class="pothole_description">
+                    <p>GPS Location: </p>
+                    <p>Site Location:</p>
+                    <p>Size: </p>
+                </div>
+            </section>
+
+            <section class="pothole_card">
+                <h2>Pothole #2</h2>
+                <img src="images/pothole-02.jpg" class="pothole_image" />
+                <div class="pothole_description">
+                    <p>GPS Location: </p>
+                    <p>Site Location:</p>
+                    <p>Size: </p>
+                </div>
+            </section>
+
+            <section class="pothole_card">
+                <h2>Pothole #3</h2>
+                <img src="images/pothole-03.jpg" class="pothole_image" />
+                <div class="pothole_description">
+                    <p>GPS Location: </p>
+                    <p>Site Location:</p>
+                    <p>Size: </p>
+                </div>
+            </section>
+
+            <section class="pothole_card">
+                <h2>Pothole #4</h2>
+                <img src="images/pothole-04.jpg" class="pothole_image" />
+                <div class="pothole_description">
+                    <p>GPS Location: </p>
+                    <p>Site Location:</p>
+                    <p>Size: </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="shoutout shaded pad_horizontal">
+        <h3>Drive safe<br />Avoid potholes</h3>
+        <p>If you have information about any potholes<br /> that you want to list here, please email us.</p>
+    </section>
+
+    <footer class="pad_all">
+        <div id="footer_contact">
+            <a href="mailto:bijay.chamling@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/BijayRai75" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/bijay.rai" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://github.com/beejoy" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+
+        <div id="footer_copyright">
+            <p>&copy; 2020 Bijay Rai</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
