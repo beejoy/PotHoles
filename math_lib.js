@@ -6,4 +6,12 @@ const subtract = (a, b) => {
     return a - b;
 }
 
-export { add, subtract };
+const multiply = (a, b) => {
+    return a * b;
+}
+
+const divide = (a, b) => {
+    return a / b;
+}
+
+export { add, subtract, multiply, divide };
